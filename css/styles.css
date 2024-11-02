@@ -1,0 +1,98 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/back.jpg');
+    background-size: cover;
+    overflow: hidden; /* إلغاء التمرير */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* لجعل الصفحة تملأ الشاشة بالكامل */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* تغيير المحاذاة إلى المنتصف عمودياً */
+    color: #fff;
+}
+
+.title {
+    font-family: 'Caveat', cursive;
+    font-size: 4em;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    pointer-events: none;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.7);
+}
+
+.video-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* تباعد بسيط بين الفيديو وزر التشغيل */
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
+    backdrop-filter: blur(10px); /* تأثير الضبابية المتوسط */
+    -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات الويب المبنية على WebKit */
+}
+
+video {
+    width: 100%; /* اجعل العرض 100% لتناسب الحاوية */
+    max-width: 300px; /* الحد الأقصى للعرض */
+    border-radius: 15px;
+}
+
+.play-button {
+    font-family: 'Tajawal', sans-serif;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* خلفية شبه شفافة */
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.7); /* إضافة خط حدودي شفاف قليلاً */
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* تأثير الظل للزر */
+    transition: transform 0.2s, background-color 0.2s; /* إضافة تأثير للتحويل وتغيير الخلفية */
+    margin-bottom: 15px; /* تباعد بسيط بين الزر وأيقونات السوشيال ميديا */
+    backdrop-filter: blur(10px); /* تأثير الضبابية المتوسط للزر */
+    -webkit-backdrop-filter: blur(10px); /* دعم لمتصفحات الويب المبنية على WebKit */
+}
+
+.play-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* تغيير لون الخلفية إلى شفاف قليلاً عند التمرير */
+}
+
+.play-button:active {
+    transform: scale(1.1); /* تكبير الزر عند اللمس */
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.icon img {
+    width: 30px;
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.icon:hover img {
+    transform: scale(1.1);
+}
+
+button,
+.play-button,
+.icon img {
+    outline: none;
+}
